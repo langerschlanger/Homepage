@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f172a;
+  --card: rgba(255, 255, 255, 0.10);
+  --card-hover: rgba(255, 255, 255, 0.16);
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --accent: #38bdf8;
+  --accent-2: #a78bfa;
+  --border: rgba(255, 255, 255, 0.18);
+  --shadow: rgba(0, 0, 0, 0.25);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.35), transparent 35%),
+    radial-gradient(circle at top right, rgba(167, 139, 250, 0.35), transparent 35%),
+    linear-gradient(135deg, #020617, var(--bg));
+  color: var(--text);
+}
+
+.hero {
+  padding: 70px 20px 35px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  font-weight: bold;
+  letter-spacing: 0.04em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(42px, 8vw, 86px);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.subtitle {
+  max-width: 650px;
+  margin: 22px auto 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+main {
+  width: min(1150px, calc(100% - 36px));
+  margin: 0 auto;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 14px;
+  margin: 22px 0 24px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.10);
+  color: var(--text);
+  font-size: 15px;
+  backdrop-filter: blur(12px);
+}
+
+select option {
+  color: #0f172a;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.16);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  padding-bottom: 50px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  min-height: 235px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  background: var(--card);
+  box-shadow: 0 20px 50px var(--shadow);
+  backdrop-filter: blur(18px);
+  transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -80px auto auto -80px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  opacity: 0.22;
+  filter: blur(8px);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: var(--card-hover);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tag {
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 7px 11px;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.12);
+  color: #bae6fd;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  letter-spacing: -0.03em;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: auto;
+  padding: 11px 14px;
+  border-radius: 13px;
+  background: var(--text);
+  color: #020617;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.button:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  font-size: 18px;
+  padding: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  width: min(1150px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 10px 0 35px;
+  color: #94a3b8;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding-top: 45px;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 220px;
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meine Projekte</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Projektübersicht</p>
+      <h1>Meine Projekte</h1>
+      <p class="subtitle">
+        Hier findest du meine Websites, Tools und Experimente.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls">
+      <input id="suche" type="text" placeholder="Projekt suchen..." autocomplete="off" />
+
+      <select id="kategorieFilter">
+        <option value="alle">Alle Kategorien</option>
+      </select>
+    </section>
+
+    <section id="projektListe" class="grid"></section>
+
+    <p id="keineProjekte" class="empty hidden">
+      Keine passenden Projekte gefunden.
+    </p>
+  </main>
+
+  <footer>
+    <p>Bearbeite deine Projekte einfach in der Datei <strong>projekte.json</strong>.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

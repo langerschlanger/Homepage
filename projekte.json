@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Datum ↔ Tag Rechner",
+    "beschreibung": "Rechnet ein Datum in den Tag seit Jahr 0 um und umgekehrt.",
+    "link": "https://langerschlanger.github.io/Tag-zu-Jahr/",
+    "kategorie": "Tools"
+  },
+  {
+    "name": "Quiz",
+    "beschreibung": "Prototype von einem Quizspiel.",
+    "link": "https://langerschlanger.github.io/quiz/",
+    "kategorie": "Spiele"
+  },
+  {
+    "name": "Google-Generator",
+    "beschreibung": "Erstellt Links, die etwas bei Google suchen.",
+    "link": "https://langerschlanger.github.io/suche/",
+    "kategorie": "Tools"
+  }
+]
