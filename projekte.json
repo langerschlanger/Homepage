@@ -12,6 +12,12 @@
     "kategorie": "Spiele"
   },
   {
+    "name": "Geld-Zeit-Rechner",
+    "beschreibung": "Tool zum Berechnen der Löhne für eine Bestimmte Arbeitszeit.",
+    "link": "https://langerschlanger.github.io/quiz/",
+    "kategorie": "Tools"
+  },
+  {
     "name": "Google-Generator",
     "beschreibung": "Erstellt Links, die etwas bei Google suchen.",
     "link": "https://langerschlanger.github.io/suche/",
